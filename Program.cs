@@ -1,14 +1,23 @@
 ﻿using System;
+using System.Linq;
+using LibGit2Sharp;
+using Serilog;
 
 namespace GitTool
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Begin:");
-            Console.WriteLine(ThisAssembly.Git.Commit);
+            Log.Logger = new LoggerConfiguration().WriteTo.Console().WriteTo
+                .File($"log.txt", rollingInterval: RollingInterval.Day).CreateLogger();
 
+            using var repo = new Repository("C:\\_Projects\\FrostViper.Web\\.git");
+
+            foreach (var c in repo.Commits.ToList())
+            {
+                Log.Information(c.Author + "," + c.Message);
+            }
         }
 
     }
