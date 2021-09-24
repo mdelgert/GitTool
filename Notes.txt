@@ -1,0 +1,4 @@
+﻿https://www.nuget.org/packages/GitInfo/
+https://stackoverflow.com/questions/30298311/how-to-retrieve-file-history-from-git-repository-using-c
+https://blog.somewhatabstract.com/2015/06/22/getting-information-about-your-git-repository-with-c/
+
