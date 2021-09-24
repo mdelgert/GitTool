@@ -3,8 +3,11 @@ https://stackoverflow.com/questions/30298311/how-to-retrieve-file-history-from-g
 https://blog.somewhatabstract.com/2015/06/22/getting-information-about-your-git-repository-with-c/
 https://www.nuget.org/packages/LibGit2Sharp
 https://github.com/libgit2/libgit2sharp/wiki
+https://stackoverflow.com/questions/33680735/libgit2sharp-list-all-the-pull-requests-authors
 
 Install-Package LibGit2Sharp -Version 0.26.2
 Install-Package Serilog
 Install-Package Serilog.Sinks.Console
 Install-Package Serilog.Sinks.File
+
+Log.Information(c.Author + "," + c.MessageShort);
