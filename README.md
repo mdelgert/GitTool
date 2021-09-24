@@ -1,0 +1,2 @@
+# GitTool
+Git automation
